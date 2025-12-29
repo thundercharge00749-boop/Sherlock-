@@ -141,9 +141,10 @@ with col1:
                 if category in all_cues:
                     st.markdown(f"**{category.replace('_', ' ')}**")
                     for cue in all_cues[category]:
+                        unique_key = f"cue_{category}_{cue}"
                         if st.checkbox(
                             cue.replace('_', ' ').title(), 
-                            key=f"cue_{cue}"
+                            key=f"cue_{category}_{cue}"
                         ):
                             selected_cues.append(cue)
 
