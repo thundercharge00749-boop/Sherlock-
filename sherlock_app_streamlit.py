@@ -144,7 +144,7 @@ with col1:
                         unique_key = f"cue_{category}_{cue}"
                         if st.checkbox(
                             cue.replace('_', ' ').title(), 
-                            key=f"cue_{category}_{cue}"
+                            key=unique_key
                         ):
                             selected_cues.append(cue)
 
